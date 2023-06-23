@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import '../App.css';
-//import DaumPostcodeEmbed from "react-daum-postcode";
+import DaumPostcodeEmbed from "react-daum-postcode";
 
 function MemberForm(props) {
-    // const [openPostcode, setOpenPostcode] = useState(false);
-     const [myid,setMyid]=useState('');
-    // const [mypass,setMypass]=useState('');
-    // const [myaddress,setMyaddress]=useState('');
-     const [myname,setMyname]=useState('');
-    // const [idcount,setCount]=useState(0);
+    const [openPostcode, setOpenPostcode] = useState(false);
+    const [myid,setMyid]=useState('');
+    const [mypass,setMypass]=useState('');
+    const [myaddress,setMyaddress]=useState('');
+    const [myname,setMyname]=useState('');
+    const [idcount,setCount]=useState(0);
     
     const onSubmitEvent=(e)=>{
         e.propertyIsEnumerable();//기본 이벤트 무효화
