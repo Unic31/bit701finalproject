@@ -2,8 +2,10 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import {Home, Menu} from "./components";
 import {LoginForm, MemberForm, MemberList} from "./member";
-import {BoardForm, BoardList} from "./board";
+import {BoardDetailPage, BoardForm, BoardList} from "./board";
 import noimage from './image/noimage.png'
+import {Logout} from "@mui/icons-material";
+
 
 function RouteMain(props) {
 
@@ -26,7 +28,8 @@ function RouteMain(props) {
                 <Route path={'/board'}>
                     <Route path={'form'} element={<BoardForm/>}/>
                     <Route path={'list'} element={<BoardList/>}/>
-                    <Route path={'list:currentPage'} element={<BoardList/>}/>
+                    <Route path={'list/:currentPage'} element={<BoardList/>}/>
+                    <Route path={'detail/:num/:currentPage'} element={<BoardDetailPage/>}/>
                 </Route>
 
                 <Route path={'*'} element={
